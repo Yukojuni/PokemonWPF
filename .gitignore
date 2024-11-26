@@ -1,0 +1,50 @@
+.vsidx# Ignore les fichiers binaires et les r�pertoires de build
+bin/
+obj/
+
+# Ignorer les fichiers de configuration utilisateur
+.vscode/
+.vs/
+.idea/
+
+# Fichiers sp�cifiques � Visual Studio
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vsidx
+
+# Ignorer les fichiers temporaires et de sauvegarde
+*.tmp
+*.bak
+*.swp
+
+# Fichiers NuGet
+packages/
+
+# Ignorer les fichiers g�n�r�s par la compilation (PDB, EXE, DLL, etc.)
+*.exe
+*.dll
+*.pdb
+*.app
+*.out
+
+# Ignorer les fichiers de cache d'outil de test (comme NUnit, etc.)
+TestResults/
+
+# Fichiers de l'outil de gestion des d�pendances (comme dotnet)
+project.lock.json
+project.fragment.lock.json
+
+# Ignorer les fichiers de configuration sp�cifique � l'environnement
+*.config
+*.env
+
+# Ignorer les fichiers du cache .NET Core (si applicable)
+.nuget/
+
+# Ignorer les fichiers g�n�r�s par Visual Studio pour la publication (Publish)
+publish/
+
+# Ignorer les fichiers de Log
+*.log
