@@ -1,6 +1,6 @@
-# 🎮 Pokemon-Like en C# avec WPF
+# 🎮 Pokemon en C# avec WPF
 
-Bienvenue dans **Pokemon-Like**, une application développée en **C# avec WPF**. Ce projet propose une simulation de combats au tour par tour, inspirée de l'univers Pokémon, avec une interface utilisateur intuitive et une gestion complète de la base de données.
+Bienvenue dans **Pokemon**, une application développée en **C# avec WPF**. Ce projet propose une simulation de combats au tour par tour, inspirée de l'univers Pokémon, avec une interface utilisateur intuitive et une gestion complète de la base de données.
 
 ---
 
@@ -61,7 +61,7 @@ Bienvenue dans **Pokemon-Like**, une application développée en **C# avec WPF**
 1. **Clonez le dépôt GitHub** :
    ```bash
    git clone https://github.com/Yukojuni/PokemonWPF.git
-   cd PokemonWPF
+   cd PokemonWPF/
    Executer l'app
   
 
