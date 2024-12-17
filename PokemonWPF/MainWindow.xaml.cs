@@ -1,5 +1,7 @@
-﻿using System.Text;
+﻿using PokemonWPF.View;
+using PokemonWPF.ViewModel;
 using System.Windows;
+using System.Text;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -12,13 +14,22 @@ using System.Windows.Shapes;
 namespace PokemonWPF
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logique d'interaction pour MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        public MainWindowVM mainWindowVM { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+
+            //create mainwindow view model
+            mainWindowVM = new MainWindowVM();
+
+            //Assign VM to datacontext
+            //=> View can acces to variables to VM;
+            DataContext = mainWindowVM;
         }
     }
 }
+    

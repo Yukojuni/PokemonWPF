@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="PokemonWPF.View.FightView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" Background="#FF2E3764">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Monster Fight!" FontSize="24" HorizontalAlignment="Center" Margin="10" Foreground="White"/>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" HorizontalAlignment="Center">
+                <Image Source="{Binding PlayerMonster.ImageUrl}" Width="150" Height="150"/>
+                <TextBlock Text="{Binding PlayerMonster.Name}" FontSize="16" Foreground="White" HorizontalAlignment="Center"/>
+                <ProgressBar Value="{Binding PlayerHealth}" Maximum="{Binding PlayerMonster.Health}" Height="20" Width="150" Margin="5"/>
+                <TextBlock Text="Select a Spell:" FontSize="14" Foreground="White" HorizontalAlignment="Center" Margin="10"/>
+                <ComboBox ItemsSource="{Binding PlayerMonster.Spells}" 
+                          SelectedItem="{Binding SelectedSpell}" 
+                          DisplayMemberPath="Name" 
+                          Width="150" Margin="5"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <TextBlock Text="Battle Log:" FontSize="16" Foreground="White" Margin="5"/>
+                <TextBox Text="{Binding BattleLog}" IsReadOnly="True" Height="200" VerticalScrollBarVisibility="Auto" Margin="5"/>
+                <Button Content="Fight" Command="{Binding FightCommand}" Width="100" Height="30" HorizontalAlignment="Center" Margin="5"/>
+                <Button Content="New Fight" Command="{Binding NewFightCommand}" Width="100" Height="30" HorizontalAlignment="Center" Margin="5"/>
+            </StackPanel>
+            <StackPanel Grid.Column="2" HorizontalAlignment="Center">
+                <Image Source="{Binding EnemyMonster.ImageUrl}" Width="150" Height="150"/>
+                <TextBlock Text="{Binding EnemyMonster.Name}" FontSize="16" Foreground="White" HorizontalAlignment="Center"/>
+                <ProgressBar Value="{Binding EnemyHealth}" Maximum="{Binding EnemyMonster.Health}" Height="20" Width="150" Margin="5"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

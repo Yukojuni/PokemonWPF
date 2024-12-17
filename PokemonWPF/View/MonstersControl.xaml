@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="PokemonWPF.View.MonstersControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:PokemonWPF.View"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800" Background="#FF2E3764">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Add" Width="75" Height="30" Margin="0,0,5,0"
+                    Command="{Binding AddCommand}"/>
+            <Button Content="Delete" Width="75" Height="30" Margin="0,0,5,0"
+                    Command="{Binding DeleteCommand}"/>
+            <Button Content="Unselect" Width="75" Height="30" Margin="0,0,5,0"
+                    Command="{Binding UnselectCommand}"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Liste des monstres -->
+            <DataGrid 
+                ItemsSource="{Binding Monsters}"
+                SelectedItem="{Binding SelectedMonster}"
+                CanUserAddRows="False" CanUserDeleteRows="False"
+                AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="Image" Width="10*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding ImageUrl}" Width="50" Height="50"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="10*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <!-- Informations détaillées -->
+            <StackPanel Grid.Column="1">
+                <Label Content="ID"/>
+                <TextBox Margin="5,0,5,15" Text="{Binding SelectedMonster.Id, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
+                <Label Content="Name"/>
+                <TextBox Margin="5,0,5,15" Text="{Binding SelectedMonster.Name, UpdateSourceTrigger=PropertyChanged}"/>
+                <Label Content="Health"/>
+                <TextBox Margin="5,0,5,15" Text="{Binding SelectedMonster.Health, UpdateSourceTrigger=PropertyChanged}"/>
+                <Label Content="Spells"/>
+                <ListBox ItemsSource="{Binding SelectedMonster.Spells}" DisplayMemberPath="Name" Margin="5,0,5,15"/>
+                <Button Content="Fight" Width="75" Height="30" Margin="0,0,5,0"
+                    Command="{Binding FightCommand}"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>
