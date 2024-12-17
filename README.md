@@ -1,4 +1,4 @@
-Pokemon-Like en C# avec WPF
+Pokemon en C# avec WPF
 Bienvenue dans le projet Pokemon-Like, une application développée en C# avec WPF. Ce projet consiste à créer une simulation de combats au tour par tour inspirée de l'univers Pokémon, intégrant une gestion de base de données et une interface utilisateur intuitive.
 
 🎯 Objectifs du Projet
