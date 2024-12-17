@@ -2,6 +2,7 @@ Pokemon-Like en C# avec WPF
 Bienvenue dans le projet Pokemon-Like, une application développée en C# avec WPF. Ce projet consiste à créer une simulation de combats au tour par tour inspirée de l'univers Pokémon, intégrant une gestion de base de données et une interface utilisateur intuitive.
 
 🎯 Objectifs du Projet
+
   1. POO (Programmation Orientée Objet) : Organisation du code en classes clairement séparées.
   2. Respect du Modèle MVVM : Séparation des responsabilités entre la Vue, le Modèle et le ViewModel.
   3. Base de Données SQL Server Express :
@@ -13,6 +14,7 @@ Bienvenue dans le projet Pokemon-Like, une application développée en C# avec W
     Génération dynamique d'ennemis avec des statistiques améliorées.
 
 💻 Fonctionnalités
+
   1. Écran de Connexion (Login)
     Permet aux utilisateurs de se connecter en renseignant un nom d'utilisateur et un mot de passe.
     Les mots de passe sont hashés avant d'être stockés en base (sécurisation des données).
@@ -37,6 +39,7 @@ Bienvenue dans le projet Pokemon-Like, une application développée en C# avec W
     Rejouer : Un bouton permet de relancer un combat avec un nouvel ennemi.
 
 ⚙️ Installation
+
 Prérequis
 Visual Studio (avec support pour WPF et .NET 6 ou supérieur).
 SQL Server Express.
@@ -50,6 +53,7 @@ Exécuter l'Application
 Dans l'application, renseignez la chaîne de connexion à votre base de données via l'onglet Settings.
 
 📦 Packages Utilisés
+
 Entity Framework Core : Gestion de la base de données (lecture, écriture).
 CommunityToolkit.Mvvm : Implémentation simplifiée du modèle MVVM.
 Microsoft.EntityFrameworkCore :
@@ -58,6 +62,7 @@ Microsoft.EntityFrameworkCore.SqlServer
 Microsoft.EntityFrameworkCore.Tools : 
 
 🗂️ Architecture
+
 Modèle MVVM
 Model : Classes représentant les données (Monsters, Spells, etc.).
 ViewModel : Gestion des données et des interactions pour chaque vue (ex. : GameVM, FightVM).
@@ -68,6 +73,7 @@ Organisation des Fichiers
 /View : Interfaces utilisateur en XAML.
 
 🔍 Features Avancées
+
 Hashing des Mots de Passe : Sécurisation avec un algorithme de hachage pour le stockage des mots de passe.
 Statistiques Améliorées des Ennemis : Les ennemis deviennent plus puissants à mesure que le joueur avance.
 Connexion au Choix : Permet de basculer entre plusieurs bases de données via une simple modification dans les paramètres.
