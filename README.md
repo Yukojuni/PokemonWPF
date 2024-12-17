@@ -11,6 +11,7 @@ Bienvenue dans le projet Pokemon-Like, une application développée en C# avec W
     Utilisation des sorts pour infliger des dégâts.
     Barre de santé visible pour chaque monstre.
     Génération dynamique d'ennemis avec des statistiques améliorées.
+
 💻 Fonctionnalités
   1. Écran de Connexion (Login)
     Permet aux utilisateurs de se connecter en renseignant un nom d'utilisateur et un mot de passe.
@@ -34,6 +35,7 @@ Bienvenue dans le projet Pokemon-Like, une application développée en C# avec W
       Génération d'ennemis avec des statistiques légèrement améliorées à chaque combat (+10% HP, +5% dégâts).
     Score : Incrémentation du score pour chaque monstre vaincu.
     Rejouer : Un bouton permet de relancer un combat avec un nouvel ennemi.
+
 ⚙️ Installation
 Prérequis
 Visual Studio (avec support pour WPF et .NET 6 ou supérieur).
@@ -41,7 +43,7 @@ SQL Server Express.
 Git.
 Étapes
 Cloner le Dépôt
-'git clone https://github.com/...
+'[git clone https://github.com/...](https://github.com/Yukojuni/PokemonWPF.git)'
 cd PokemonWPF
 
 Exécuter l'Application
